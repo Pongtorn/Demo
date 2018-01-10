@@ -1,46 +1,38 @@
 <!doctype html>
-<html>
-  <head>
-    <title>Socket.IO chat</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
-    </style>
-  </head>
-  <body>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
-    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <script>
-        
-        $(document).ready(function () {
-            $.get("/List", function (data) {
-                $.each(data, function (i, item) {
-                    $('#messages').append($('<li>').text(item.name));
-                    //console.log(item.name);
-                    //test
-                });
-                
-            });
-        });
-        var socket = io();
-        $('form').submit(function () {
-            socket.emit('chat message', $('#m').val());
-            $('#m').val('');
-            return false;
-        });
-        socket.on('chat message', function (msg) {
-            $('#messages').append($('<li>').text(msg));
-        });
-    </script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Button - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".widget input[type=submit], .widget a, .widget button" ).button();
+    $( "button, input, a" ).click( function( event ) {
+      event.preventDefault();
+    } );
+  } );
+  </script>
+</head>
+<body>
+<div class="widget">
+  <h1>Widget Buttons</h1>
+  <button>A button element</button>
+ 
+  <input type="submit" value="A submit button">
+ 
+  <a href="#">An anchor</a>
+</div>
+<h1>CSS Buttons</h1>
+<button class="ui-button ui-widget ui-corner-all">A button element</button>
+ 
+<input class="ui-button ui-widget ui-corner-all" type="submit" value="A submit button">
+ 
+<a class="ui-button ui-widget ui-corner-all" href="#">An anchor</a>
+ 
+ 
+</body>
 </html>
