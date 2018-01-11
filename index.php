@@ -2,8 +2,30 @@
 $access_token = '3qpbMiQKI5Am4GqVqqkYgfih3AIb0xCY/G7DFiky7mUsUP2RwVX8+9PHGu2o3G4ok9RrFWjH5+d+2yEW76qWSOOgp6TiPGdi2naTH6AkL+JNSJKTYQvZa9mT9ZZf6PaC9Lq2EKjWQaabQ5rBMnSUkAdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
-$content = file_get_contents('php://input');
+//$content = file_get_contents('php://input');
+
+
+$content = '{
+  "events": [
+      {
+        "replyToken": "nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
+        "type": "message",
+        "timestamp": 1462629479859,
+        "source": {
+             "type": "user",
+             "userId": "U206d25c2ea6bd87c17655609a1c37cb8"
+         },
+         "message": {
+             "id": "325708",
+             "type": "text",
+             "text": "Hello, world"
+          }
+      }
+  ]
+}';
+
 print $content;
+
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
