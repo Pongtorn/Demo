@@ -3,6 +3,7 @@ $access_token = '3qpbMiQKI5Am4GqVqqkYgfih3AIb0xCY/G7DFiky7mUsUP2RwVX8+9PHGu2o3G4
 
 // Get POST body content
 $content = file_get_contents('php://input');
+print $content;
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
@@ -13,7 +14,7 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = $event['message']['text'];
-			print $text;
+			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
