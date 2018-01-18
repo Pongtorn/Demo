@@ -1,5 +1,7 @@
 <?php
 
+$msg = $_GET['msg'];
+
 $userid = "U9292ec26d665cfb8a06058247138283b";
 
 
@@ -12,7 +14,7 @@ $access_token = '3qpbMiQKI5Am4GqVqqkYgfih3AIb0xCY/G7DFiky7mUsUP2RwVX8+9PHGu2o3G4
 
  $messages = [
 				'type' => 'text',
-				'text' => 'Hello'
+				'text' => $msg
 			];
 
   $data = [
