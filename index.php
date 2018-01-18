@@ -16,6 +16,13 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			//$text = 'Hello World!!';
+			
+			if($text=="nice"){
+				$text = 'sinostech';
+			}else if($text=="hello"){
+				$text = 'hello world';
+			}
+			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
