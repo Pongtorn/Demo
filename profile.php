@@ -7,7 +7,7 @@ $access_token = '3qpbMiQKI5Am4GqVqqkYgfih3AIb0xCY/G7DFiky7mUsUP2RwVX8+9PHGu2o3G4
 
   $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
   $ch = curl_init($url);
-  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
   curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
