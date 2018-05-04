@@ -1,5 +1,5 @@
 <?php
-
+/*
 $userid = "U9292ec26d665cfb8a06058247138283b";
 $access_token = '3qpbMiQKI5Am4GqVqqkYgfih3AIb0xCY/G7DFiky7mUsUP2RwVX8+9PHGu2o3G4ok9RrFWjH5+d+2yEW76qWSOOgp6TiPGdi2naTH6AkL+JNSJKTYQvZa9mT9ZZf6PaC9Lq2EKjWQaabQ5rBMnSUkAdB04t89/1O/w1cDnyilFU=';
 // Make a POST Request to Messaging API to reply to sender
@@ -16,4 +16,6 @@ $access_token = '3qpbMiQKI5Am4GqVqqkYgfih3AIb0xCY/G7DFiky7mUsUP2RwVX8+9PHGu2o3G4
   curl_close($ch);
   echo $result . "\r\n";
 // Get POST body content
+*/
+echo "Hello";
 ?>
